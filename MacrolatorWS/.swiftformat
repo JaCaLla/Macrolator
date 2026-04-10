@@ -1,0 +1,7 @@
+# .swiftformat
+--swiftversion 5.9
+--indent 4
+--maxwidth 120
+--trimwhitespace always
+--importgrouping testable-last
+--exclude Derived,Tuist
