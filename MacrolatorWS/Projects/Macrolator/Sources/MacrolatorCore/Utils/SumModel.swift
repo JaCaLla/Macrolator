@@ -1,15 +1,14 @@
 public struct SumModel {
-    
-    public let a: Int
-    public let b: Int
-    
-    public init(a: Int, b: Int) {
-        self.a = a
-        self.b = b
+    public let intA: Int
+    public let intB: Int
+
+    public init(intA: Int, intB: Int) {
+        self.intA = intA
+        self.intB = intB
     }
-    
+
     /// Devuelve la suma de ambos valores
     public func sum() -> Int {
-        return a + b
+        intA + intB
     }
 }

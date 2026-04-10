@@ -1,4 +1,5 @@
 import ProjectDescription
+import ProjectDescriptionHelpers
 
 let project = Project(
     name: "MacrolatoriOSApp",
@@ -11,6 +12,7 @@ let project = Project(
             bundleId: "com.macrolator.app",
             infoPlist: .default,
             sources: ["Sources/MacrolatorApp/**"],
+            scripts: TargetScript.linting,
             dependencies: [
                 .project(target: "MacrolatoriOS", path: "../Macrolator"),
                 .project(target: "MacrolatorCore", path: "../Macrolator")
@@ -23,6 +25,7 @@ let project = Project(
             product: .unitTests,
             bundleId: "com.macrolator.app.tests",
             sources: ["Sources/MacrolatorAppTests/**"],
+            scripts: TargetScript.linting,
             dependencies: [
                 .target(name: "MacrolatorApp")
             ]
