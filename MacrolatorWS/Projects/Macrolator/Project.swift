@@ -1,4 +1,5 @@
 import ProjectDescription
+import Foundation
 
 let project = Project(
     name: "Macrolator",
@@ -11,6 +12,22 @@ let project = Project(
             product: .framework,
             bundleId: "com.macrolator.core",
             sources: ["Sources/MacrolatorCore/**"],
+            scripts: [
+                .pre(
+                    script: """
+                    echo "<<<<<<<<<<<<<< BEGIN - SWIFTLINT <<<<<<<<<<<<<<<<<<<<<"
+                    export PATH="$PATH:/opt/homebrew/bin:/Users/$USER/.mint/bin"
+                    if which mint > /dev/null; then
+                        mint run swiftlint swiftlint
+                    else
+                        echo "warning: Mint not installed. Run: brew install mint"
+                    fi
+                    echo "<<<<<<<<<<<<<< END - SWIFTLINT <<<<<<<<<<<<<<<<<<<<<"
+                    """,
+                    name: "SwiftLint",
+                    basedOnDependencyAnalysis: false
+                )
+            ],
             dependencies: []
         ),
         

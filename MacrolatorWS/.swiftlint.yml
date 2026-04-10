@@ -1,0 +1,95 @@
+# =========================
+# Paths
+# =========================
+included:
+  - Projects
+
+excluded:
+  - Tuist
+  - Derived
+  - .build
+  - Carthage
+  - Pods
+
+# =========================
+# Analyzer rules (más costosas pero útiles en CI)
+# =========================
+analyzer_rules:
+  - unused_import
+  - unused_declaration
+
+# =========================
+# Opt-in rules (calidad real)
+# =========================
+opt_in_rules:
+  - empty_count
+  - explicit_init
+  - explicit_self
+  - first_where
+  - flatmap_over_map_reduce
+  - force_unwrapping
+  - implicitly_unwrapped_optional
+  - modifier_order
+  - redundant_nil_coalescing
+  - sorted_imports
+  - toggle_bool
+  - unneeded_parentheses_in_closure_argument
+
+# =========================
+# Disabled rules (evitar ruido)
+# =========================
+disabled_rules:
+  - trailing_whitespace
+  - todo
+  - line_length   # lo controlamos abajo manualmente
+
+# =========================
+# Configuración de reglas
+# =========================
+
+line_length:
+  warning: 120
+  error: 160
+  ignores_comments: true
+  ignores_urls: true
+
+type_body_length:
+  warning: 300
+  error: 400
+
+function_body_length:
+  warning: 40
+  error: 80
+
+file_length:
+  warning: 500
+  error: 800
+
+identifier_name:
+  min_length: 2
+  excluded:
+    - id
+    - vm
+    - x
+    - y
+
+# =========================
+# Force rules (críticas)
+# =========================
+
+force_cast: error
+force_try: warning
+
+# =========================
+# SwiftUI friendly
+# =========================
+
+type_name:
+  min_length: 3
+  max_length: 50
+
+# =========================
+# Reporter
+# =========================
+
+reporter: "xcode"
