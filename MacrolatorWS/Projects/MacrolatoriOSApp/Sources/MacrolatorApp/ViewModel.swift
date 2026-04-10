@@ -1,4 +1,5 @@
 import Foundation
+import MacrolatorCore
 
 final class AppViewModel: ObservableObject {
     
