@@ -62,3 +62,4 @@ project.pbxproj
 MacrolatorWS/Projects/Macrolator/Macrolator.xcodeproj/xcshareddata/xcschemes/MacrolatorCore.xcscheme
 MacrolatorWS/Projects/Macrolator/Macrolator.xcodeproj/xcshareddata/xcschemes/MacrolatoriOS.xcscheme
 MacrolatorApp.xcscheme
+CI.xcscheme
