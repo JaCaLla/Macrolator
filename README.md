@@ -47,6 +47,16 @@ Example:
 
 ### Steps
 
+```Tools
+# Install mint and SwiftLint
+brew install mint
+mint install realm/SwiftLint
+
+# Install SwiftFormmat
+mint install realm/SwiftFormat
+```
+
+
 ```bash
 # Clone the repository
 git clone https://github.com/your-username/your-repo-name.git
