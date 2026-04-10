@@ -88,13 +88,24 @@ your-project.xcworkspace
 ## 📁 Project Structure
 
 ```
-├── App/
-├── Models/
-├── Views/
-├── ViewModels/
-├── Services/
-├── Resources/
-└── Tests/
+MacrolatorWorkspace/
+├── Tuist/
+│   └── Config.swift
+├── Workspace.swift
+├── Projects/
+│   ├── Macrolator/
+│   │   ├── Project.swift
+│   │   └── Sources/
+│   │       ├── MacrolatorCore/
+│   │       ├── MacrolatoriOS/
+│   │       └── Tests/
+│   │           ├── MacrolatorCoreTests/
+│   │           └── MacrolatoriOSTests/
+│   └── MacrolatoriOSApp/
+│       ├── Project.swift
+│       └── Sources/
+│           ├── MacrolatorApp/
+│           └── MacrolatorAppTests/
 ```
 
 ---
